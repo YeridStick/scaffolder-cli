@@ -1,31 +1,31 @@
-# Scaffolder-CLI 🚀
+# Scaffolder-CLI
 
-Generador de microservicios basado en **Spring WebFlux** y **Arquitectura Hexagonal (Clean Architecture)**. Diseñado para acelerar el desarrollo de aplicaciones reactivas con R2DBC.
+Generador de microservicios basado en Spring WebFlux y Arquitectura Hexagonal (Clean Architecture). Diseñado para acelerar el desarrollo de aplicaciones reactivas con R2DBC.
 
-## 📋 Requisitos
+## Requisitos
 
-- **Java 17** o superior.
-- **Gradle** (incluido mediante el wrapper).
+- Java 17 o superior.
+- Gradle (incluido mediante el wrapper).
 
-## ⚙️ Instalación
+## Instalación
 
 Para instalar y preparar la herramienta en tu máquina local:
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/scaffolder-cli.git
+git clone https://github.com/YeridStick/scaffolder-cli.git
 cd scaffolder-cli
 
 # 2. Compilar el proyecto
 ./gradlew build
 ```
 
-## 🚀 Uso Alternativo (vía Gradle Run)
+## Uso via Gradle
 
 Puedes ejecutar el motor de generación directamente usando Gradle:
 
 ### 1. Inicializar un nuevo proyecto
-Este comando crea la estructura base, `build.gradle` y la configuración de adaptadores reactivos.
+Este comando crea la estructura base, build.gradle y la configuración de adaptadores reactivos.
 
 ```bash
 ./gradlew run --args="init --group com.compañia --name mi-microservicio"
@@ -38,9 +38,9 @@ Este comando genera los 7 componentes de la arquitectura hexagonal para una enti
 ./gradlew run --args="add-entity --group com.compañia --project mi-microservicio --name Product"
 ```
 
-## 🏗️ Arquitectura Generada
+## Arquitectura Generada
 
-Cada entidad generada sigue el patrón de **Puertos y Adaptadores**:
+Cada entidad generada sigue el patrón de Puertos y Adaptadores:
 
 - **Domain Model**: POJOs puros (Records).
 - **Domain Ports**: Interfaces de entrada (Use Cases) y salida (Repositories).
@@ -49,4 +49,4 @@ Cada entidad generada sigue el patrón de **Puertos y Adaptadores**:
 - **Adapters Out**: Implementaciones de persistencia con R2DBC.
 
 ---
-Creado por **Yerid** para optimizar desarrollos reactivos.
+Creado por Yerid para optimizar desarrollos reactivos.
