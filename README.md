@@ -17,10 +17,15 @@ git clone https://github.com/YeridStick/scaffolder-cli.git
 cd scaffolder-cli
 
 # 2. Compilar el proyecto
+# En Unix/macOS:
 ./gradlew build
+# En Windows:
+gradlew.bat build
+# O si tienes gradle instalado globalmente:
+gradle build
 ```
 
-## Uso via Gradle
+## Uso vía Gradle
 
 Puedes ejecutar el motor de generación directamente usando Gradle:
 
@@ -28,14 +33,22 @@ Puedes ejecutar el motor de generación directamente usando Gradle:
 Este comando crea la estructura base, build.gradle y la configuración de adaptadores reactivos.
 
 ```bash
-./gradlew run --args="init --group com.compañia --name mi-microservicio"
+# Unix/macOS:
+./gradlew run --args="init --group com.tuempresa --name mi-microservicio"
+
+# Windows:
+gradlew.bat run --args="init --group com.tuempresa --name mi-microservicio"
 ```
 
 ### 2. Generar una entidad CRUD
 Este comando genera los 7 componentes de la arquitectura hexagonal para una entidad específica.
 
 ```bash
-./gradlew run --args="add-entity --group com.compañia --project mi-microservicio --name Product"
+# Unix/macOS:
+./gradlew run --args="add-entity --group com.tuempresa --project mi-microservicio --name Product"
+
+# Windows:
+gradlew.bat run --args="add-entity --group com.tuempresa --project mi-microservicio --name Product"
 ```
 
 ## Arquitectura Generada
